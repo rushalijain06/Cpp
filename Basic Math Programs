@@ -1,0 +1,28 @@
+1) Given a number N. Count the number of digits in N which evenly divides N.
+
+Note :- Evenly divides means whether N is divisible by a digit i.e. leaves a remainder 0 when divided.
+
+Input:
+N = 12
+Output:
+2
+Explanation:
+1, 2 both divide 12 evenly
+
+Solution:
+class Solution{
+public:
+    int evenlyDivides(int N){
+        //code here
+        int c = 0;
+        int num=N;
+        while(num > 0){
+            int digit = num%10;
+            if(digit>0 && N%digit==0){
+                c+=1;
+            }
+            num = num/10;
+        }
+        return c;
+    }
+};
