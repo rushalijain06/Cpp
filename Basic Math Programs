@@ -135,5 +135,28 @@ int main() {
 }
 
 
+6) Calculate and return GCD of two given numbers a,b.
+Input:
+20
+5
+Output:
+5
+
+Solution:
+int gcd(int a,int b)
+{
+	//Write your code here
+	while(a > 0 && b > 0){
+		if(a > b) a = a%b;
+		else b = b%a;
+	}
+	if(a == 0) 
+		return b;
+	else return a;
+
+}
+
+
+
 
 
