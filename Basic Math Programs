@@ -1,7 +1,5 @@
 1) Given a number N. Count the number of digits in N which evenly divides N.
-
 Note :- Evenly divides means whether N is divisible by a digit i.e. leaves a remainder 0 when divided.
-
 Input:
 N = 12
 Output:
@@ -29,7 +27,6 @@ public:
 
 
 2) Given a positive integer N., The task is to find the value of    \sum_{i=1}^{i=n} F(i)  where function F(i) for the number i be defined as the sum of all divisors of ‘i‘.
-Example 1:
 Input:
 N = 4
 Output:
@@ -61,3 +58,82 @@ public:
         return sum;
     }
 };
+
+
+3) Given an integer, check if it is prime or not. Print true if number is prime, print false otherwise.
+Input :
+7
+Output :
+true
+ 
+ Solution:
+#include<iostream>
+using namespace std;
+
+int main() {
+	// Write your code here
+	int n;
+	int count = 0;
+	cin >> n;
+	for(int i=1;i*i<=n;i++){
+		if(n%i==0){
+			count+=1;
+			if((n/i)!=i){
+				count += 1;
+
+		}
+		}
+	}
+	if(count == 2)
+		cout << "true";
+	else
+		cout << "false";
+	
+}
+
+
+4) Given the number 'n', find out and return the number of digits present in a number.
+Input :
+156
+Output :
+3
+
+Solution:
+int count(int n){
+    //write your code here
+    int count = 0;
+   while(n > 0){
+        count += 1;
+       n=n/10;
+    }
+    return count;
+}
+
+
+5) Write a program to generate the reverse of a given number N. Print the corresponding reverse number.
+Note: If a number has Trailing Zeros, then it's reverse will not include them.
+Input:
+1980
+Output:
+891
+
+Solution:
+#include<iostream>
+using namespace std;
+
+int main() {
+	// Write your code here
+    int n;
+    cin >> n;
+    int revnum = 0;
+    while(n>0){
+        int digit = n % 10;
+        revnum = (revnum * 10) + digit;
+        n = n / 10;
+    }
+	cout << revnum;
+}
+
+
+6) 
+
