@@ -1,0 +1,61 @@
+1) 
+Print numbers from 1 to N without the help of loops.
+Input:
+N = 10
+Output: 1 2 3 4 5 6 7 8 9 10
+
+Solution:
+class Solution{
+    public:
+    //Complete this function
+    int c=1;
+    void printNos(int N)
+    {
+        //Your code here
+        
+        if(c > N) return;
+        cout << c <<" ";
+        c += 1;
+        printNos(N);
+    }
+};
+
+
+2)
+Print GFG n times without the loop.
+Input:
+5
+Output:
+GFG GFG GFG GFG GFG
+
+Solution:
+class Solution {
+  public:
+  int c = 1;
+    void printGfg(int N) {
+        // Code here
+        if(c > N) return;
+        cout << "GFG" << " ";
+        c += 1;
+        printGfg(N);
+    }
+};
+
+
+3)
+Print numbers from N to 1 (space separated) without the help of loops.
+Input:
+N = 10
+Output: 10 9 8 7 6 5 4 3 2 1
+
+Solution:
+class Solution {
+  public:
+  
+    void printNos(int N) {
+        // code here
+        if(N == 0) return;
+        cout << N << " ";
+        printNos(N-1);
+    }
+};
